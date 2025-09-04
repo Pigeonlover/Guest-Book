@@ -1,0 +1,4 @@
+# Files and folders to be ignored by Git
+
+node_modules
+.env
