@@ -30,10 +30,9 @@ async function handleSubmit(e) {
     },
     body: JSON.stringify({ formValues }),
   });
+  await fetchData();
 
   guestbookForm.reset();
-
-  fetchData();
 }
 
 // All messages in the database are shown in a section below the form
@@ -54,6 +53,8 @@ async function fetchData() {
 
   const messages = await res.json();
   console.log("Fetched data:", messages);
+  // Newest message shows on top
+  messages.reverse();
 
   // Delete previous display ready for the new loop
   messagesSection.innerHTML = null;
@@ -61,13 +62,47 @@ async function fetchData() {
   // Loop and display all messages
   messages.forEach((msg) => {
     const messageDiv = document.createElement("div");
-    messageDiv.classList.add("message");
-    messageDiv.innerHTML = `
-      <p><strong>Name:</strong> ${msg.name}</p>
-      <p><strong>Relationship:</strong> ${msg.relationship}</p>
-      <p><strong>Preference:</strong> ${msg.preference}</p>
-      <p><strong>Message:</strong> ${msg.message}</p>
-    `;
+    messageDiv.classList = "message-box";
+
+    const nameLabel = document.createElement("p");
+    nameLabel.textContent = "Name: ";
+    nameLabel.className = "label";
+    const nameContent = document.createElement("p");
+    nameContent.textContent = msg.name;
+    nameContent.className = "content";
+
+    const relationshipLabel = document.createElement("p");
+    relationshipLabel.textContent = "Relationship: ";
+    relationshipLabel.className = "label";
+    const relationshipContent = document.createElement("p");
+    relationshipContent.textContent = msg.relationship;
+    relationshipContent.className = "content";
+
+    const preferenceLabel = document.createElement("p");
+    preferenceLabel.textContent = "Likes pigeons?: ";
+    preferenceLabel.className = "label";
+    const preferenceContent = document.createElement("p");
+    preferenceContent.textContent = msg.preference;
+    preferenceContent.className = "content";
+
+    const messageLabel = document.createElement("p");
+    messageLabel.textContent = "Message: ";
+    messageLabel.className = "label";
+    const messageContent = document.createElement("p");
+    messageContent.textContent = msg.message;
+    messageContent.className = "content";
+
+    messageDiv.append(
+      nameLabel,
+      nameContent,
+      relationshipLabel,
+      relationshipContent,
+      preferenceLabel,
+      preferenceContent,
+      messageLabel,
+      messageContent
+    );
+
     messagesSection.appendChild(messageDiv);
   });
 }

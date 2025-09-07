@@ -8,31 +8,45 @@
     <title>Guest Book</title>
   </head>
   <body>
-    <h1>Guest Book</h1>
+    <main>
+      <h1>Guest Book</h1>
 
-    <section id="form-section">
-      <form id="guestbook-form">
-      <label for="name">Your Name:</label>
-      <input type="text" name="name" required />
-      <br><br>
+      <section id="form-section">
+        <form id="guestbook-form">
+          <div class="input-box">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" required />
+            <br><br>
+          </div>
 
-      <label for="relationship">How do you know the creator?:</label>
-      <input type="text" name="relationship" required />
-      <br><br>
+          <div class="input-box">
+            <label for="relationship">How do you know the creator?:</label>
+            <input type="text" name="relationship" required />
+            <br><br>
+          </div>
 
-      <label for="preference">Do you like pigeons?:</label>
-      <select name="preference" id="preference" required>
-        <option value="Yes">Yes</option>
-        <option value="YES">YES</option>
-      </select>
-      <br><br>
+          <div class="input-box">
+            <label for="preference">Do you like pigeons?:</label>
+            <select name="preference" id="preference" required>
+              <option value="Yes">Yes</option>
+              <option value="YES">YES</option>
+            </select>
+            <br><br>
+          </div>
 
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="5" cols="40" placeholder="Please write your message here..." required></textarea>
-      <br><br>
+          <div class="input-box">
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="40" placeholder="Please write your message here..." required></textarea>
+            <br><br>
+          </div>
 
-      <button type="submit">Submit</button>
-    </section>
-    <section id="messages-section"></section>
+        <button type="submit">Submit</button>
+      </section>
+      <!-- -->
+      <!-- -->
+      <section id="messages-section">
+      
+      </section>
+    </main>
   </body>
 </html>

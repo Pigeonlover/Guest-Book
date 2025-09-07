@@ -3,5 +3,144 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: antiquewhite;
+}
+
+body {
+  background-image: linear-gradient(rgb(7, 7, 7), rgb(34, 34, 34));
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+  color: white;
+
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+#form-section {
+  position: relative;
+  width: 50%;
+  height: 500px;
+  background: rgb(12, 12, 12);
+  border-radius: 10px;
+
+  box-shadow: 0 0 5px 5px rgb(36, 255, 255);
+
+  margin-bottom: 40px;
+}
+
+#form-section form {
+  position: absolute;
+  inset: 5px;
+  background: #0a0a0a;
+  padding: 50px 30px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#form-section form label {
+  color: white;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+#form-section form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#form-section form input {
+  position: relative;
+  width: 90%;
+  padding: 15px 10px 10px;
+  background: white;
+
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: #23242a;
+
+  transition: 0.5s;
+  z-index: 10;
+}
+
+#form-section form textarea {
+  position: relative;
+  height: 30%;
+  width: 90%;
+  padding: 15px 10px 10px;
+  background: white;
+
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: #23242a;
+
+  transition: 0.5s;
+  z-index: 10;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 25px;
+  margin-top: 10px;
+
+  font-size: medium;
+
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.5;
+}
+
+/* Comment */
+
+#messages-section {
+  border: none;
+  border-radius: 10px;
+
+  width: 70%;
+  margin-bottom: 30px;
+
+  box-shadow: 0 0 5px 5px rgb(36, 255, 255);
+}
+
+.message-box {
+  border: 1px solid white;
+  border-radius: 8px;
+
+  margin: 8px;
+  padding: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  font-weight: bold;
+  color: rgb(212, 212, 212);
+}
+
+.content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: white;
+
+  padding-bottom: 8px;
 }
