@@ -35,6 +35,8 @@ async function handleSubmit(e) {
   guestbookForm.reset();
 }
 
+//
+
 // All messages in the database are shown in a section below the form
 
 const messagesSection = document.getElementById("messages-section");
