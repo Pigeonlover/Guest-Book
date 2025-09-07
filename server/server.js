@@ -18,7 +18,7 @@ app.get("/", function (req, res) {
 });
 
 //TODO: I want to READ all the data from the staff table
-// https://guestbook-8pyg.onrender.com/guestbook --> endpoint, params
+// https://https://guest-book-l67k.onrender.com/guestbook --> endpoint, params
 app.get("/guestbook", async function (req, res) {
   //we need to query our database here
   const query = await db.query(`SELECT * FROM guestbook;`);

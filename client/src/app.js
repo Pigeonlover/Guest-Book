@@ -23,7 +23,7 @@ async function handleSubmit(e) {
 
   // Send data to the server
   // There is a POST route in server ready to receive form values
-  await fetch("https://guestbook-8pyg.onrender.com/guestbook/add-message", {
+  await fetch("https://guest-book-l67k.onrender.com/guestbook/add-message", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const messagesSection = document.getElementById("messages-section");
 // Fetch messages from the server and display them
 
 async function fetchData() {
-  const res = await fetch("https://guestbook-8pyg.onrender.com/guestbook", {
+  const res = await fetch("https://guest-book-l67k.onrender.com/guestbook", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
