@@ -8,7 +8,7 @@
 - Created dummy data in the SQL editor to use for testing.
 - Tried for the first time to add ```linear-gradient``` in CSS, which was quite fun.
 - Added box shadows on the two main containers of the site, which I thought went well with the site's style.
-- I got the idea of showing messages from newest first, like it happens in chatrooms and forums and is much more intuitive... I thought it would be complicated, but i was surprisingly easy, just had to use an inbuilt JS method! :D
+- I got the idea of showing messages from newest first, like it happens in chatrooms and forums and is much more intuitive... I thought it would be complicated, but it was surprisingly easy, just had to use an inbuilt JS method! :D
 
 ---
 
@@ -27,3 +27,4 @@
 
 
 ---
+
